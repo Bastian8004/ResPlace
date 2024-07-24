@@ -1,0 +1,8 @@
+*.pyc
+*~
+__pycache__
+django
+db.sqlite3
+/static
+twilio
+/mysite/settings.py

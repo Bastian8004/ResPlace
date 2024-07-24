@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Potwierdzenie rezerwacji</h1>
+    <p>Twoja rezerwacja została potwierdzona!</p>
+    <p><strong>Szczegóły:</strong></p>
+    <div class="contact-info">
+        <div class="contact-text">
+            <h3>Miejsce</h3>
+            <p>{{ reservation.lane.bowling_alley.name }}</p>
+        </div>
+    </div>
+    <div class="contact-info">
+        <div class="contact-text">
+            <h3>Pokój</h3>
+            <p>{{ reservation.lane.number }}</p>
+        </div>
+    </div>
+    <div class="contact-info">
+        <div class="contact-text">
+            <h3>Rozpoczęcie</h3>
+            <p>{{ reservation.start_time }}</p>
+        </div>
+    </div>
+    <div class="contact-info">
+        <div class="contact-text">
+            <h3>Zakończenie</h3>
+            <p>{{ reservation.end_time }}</p>
+        </div>
+    </div>
+    <div class="contact-info">
+        <div class="contact-text">
+            <h3>Imie</h3>
+            <p>{{ reservation.user_name }}</p>
+        </div>
+    </div>
+    <div class="contact-info">
+        <div class="contact-text">
+            <h3>Email</h3>
+            <p>{{ reservation.user_email }}</p>
+        </div>
+    </div>
+    <div class="contact-info">
+        <div class="contact-text">
+            <h3>Numer telefonu</h3>
+            <p>{{ reservation.phone_number }}</p>
+        </div>
+    </div>
+    <a href="{% url 'home' %}">Powrót</a>
+{% endblock %}

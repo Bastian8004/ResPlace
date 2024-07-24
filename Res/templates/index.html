@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Miejsca dostępnych rezerwacji</h1>
+    <ul>
+        {% for alley in alleys %}
+            <li>{{ alley.name }} - {{ alley.address }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'book_lane' %}">Przejdz do rezerwacji</a>
+
+{% endblock%}
