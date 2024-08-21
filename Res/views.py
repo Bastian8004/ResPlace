@@ -20,8 +20,6 @@ def book_lane(request):
         form = ReservationForm(request.POST)
         if form.is_valid():
             reservation = form.save()
-
-            # Prepare SMS
             client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
             message_body = f"""
             {reservation.user_name},
@@ -41,14 +39,13 @@ Miłego dnia,
 Zespół ResPlace
             """
 
-            # Send SMS
             message = client.messages.create(
                 body=message_body,
                 from_=settings.TWILIO_PHONE_NUMBER,
                 to=reservation.phone_number,
             )
 
-            # Redirect to confirmation view
+           
             return redirect('reservation_confirm', reservation_id=reservation.id)
     else:
         form = ReservationForm()
