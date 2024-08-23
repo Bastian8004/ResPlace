@@ -2,11 +2,12 @@
 
 {% block content %}
     <h1>Miejsca dostępnych rezerwacji</h1>
+    <a href="{% url 'book_lane' %}" class="btn btn-primary">Przejdz do rezerwacji</a>
     <ul>
         {% for alley in alleys %}
             <li>{{ alley.name }} - {{ alley.address }}</li>
         {% endfor %}
     </ul>
-    <a href="{% url 'book_lane' %}">Przejdz do rezerwacji</a>
+
 
 {% endblock%}
