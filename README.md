@@ -40,7 +40,7 @@
 <h4>Widok potwierdzający rezerwacje</h4>
 <img src="images/3.png">
 <h4>SMS potwierdzający rezerwacje</h4>
-<img src="images/4.png">
+<img src="images/4.jpg">
 <h4>Widok z panelu administracyjnego - dodawanie lokalu</h4>
 <img src="images/5.png">
 <h4>Widok z panelu administracyjnego - dodawanie pokoju/toru</h4>
